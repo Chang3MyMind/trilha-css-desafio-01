@@ -1,0 +1,27 @@
+.banner {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(49, 168, 221, 0.2),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("/assets/images/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-clip: cover;
+  border-bottom: 1px solid #33a8db80;
+  height: 600px;
+  padding-top: 60px;
+}
+.logo img {
+  background-color: #00000020;
+  border-radius: 50%;
+  left: 121px;
+  padding: 27px 10px 27px 10px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
