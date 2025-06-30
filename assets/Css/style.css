@@ -1,14 +1,19 @@
+body {
+}
+
+/*Header*/
+
 .banner {
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.6),
-      rgba(49, 168, 221, 0.2),
+      rgba(49, 168, 221, 0.3),
       rgba(0, 0, 0, 0.6)
     ),
     url("/assets/images/banner.png");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-background-clip: cover;
-  border-bottom: 1px solid #33a8db80;
+  border-bottom: 1px solid #33a8db60;
   height: 600px;
   padding-top: 60px;
 }
@@ -24,4 +29,208 @@
   justify-content: center;
   align-items: center;
   padding: 16px;
+}
+
+.banner-content {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-content h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+
+  background: linear-gradient(to bottom, #33a8db, #1472b7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.banner-content p {
+  color: white;
+  font-size: 20px;
+  padding-bottom: 20px;
+  width: 560px;
+}
+
+.banner-content button {
+  position: relative;
+  border: 3px solid #33a8db;
+  padding: 15px 55px;
+  background-color: transparent;
+  color: #33a8db;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Borda RGB animada */
+.banner-content button::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  background: linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+  background-size: 400%;
+  z-index: -1;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  animation: rgb-border 3s linear infinite;
+}
+
+/* Exibe a borda RGB animada no hover */
+.banner-content button:hover::before {
+  opacity: 1;
+}
+
+/* Apenas muda a cor do texto e remove a borda sólida visível */
+.banner-content button:hover {
+  color: white;
+  border-color: transparent;
+}
+
+/* Animação da borda RGB */
+@keyframes rgb-border {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 400% 50%;
+  }
+}
+
+/*Main*/
+
+#course-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px;
+  border-bottom: 1px solid #33a8db60;
+}
+
+#course-content h2 {
+  color: #33a8db;
+  text-transform: uppercase;
+  font-size: 32px;
+  word-spacing: 6px;
+  padding-bottom: 25px;
+}
+
+#course-content p {
+  color: white;
+  width: 900px;
+  text-align: center;
+}
+
+.module {
+  background-color: #252525;
+  padding: 20px 45px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: inset 0px 5px 0px 0px #00000066;
+  border: 1px solid #33a8db;
+  border-radius: 57px;
+  color: white;
+}
+
+.module span {
+  background-color: #252525;
+  color: #1472b7;
+}
+
+/*Divisão de css*/
+
+#transform-world {
+  position: relative;
+  height: 363px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 80px;
+  overflow: hidden;
+}
+
+#transform-world p {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px #33a8db;
+  z-index: 2;
+  max-width: 400px;
+}
+
+#transform-world .overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url("../images/woman-code.png"); /* ou o caminho da imagem */
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  z-index: 1;
+}
+/*Divisão de css*/
+
+#professional-challenges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 60px;
+  border-bottom: 1px solid #33a8db60;
+}
+
+#professional-challenges img {
+  padding-bottom: 30px;
+}
+
+#professional-challenges h2 {
+  color: #33a8db;
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
+#professional-challenges p {
+  color: white;
+  max-width: 900px;
+  text-align: center;
+}
+
+/*Footer*/
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 40px;
+
+  background: linear-gradient(to top, #33a8db20, black);
+}
+
+footer img {
+  max-width: 310px;
+  max-height: 44px;
 }
