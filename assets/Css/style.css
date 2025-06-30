@@ -6,7 +6,7 @@
       rgba(49, 168, 221, 0.3),
       rgba(0, 0, 0, 0.6)
     ),
-    url("/assets/images/banner.png");
+    url("../images/banner.png");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-background-clip: cover;
